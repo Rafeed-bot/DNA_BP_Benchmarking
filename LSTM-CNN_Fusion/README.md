@@ -6,7 +6,7 @@ This script implements the LSTM-CNN Fusion model, where the CNN extracts feature
 
 Before running this script, ensure you have the following installed:
 
-1. **Python 3.8+**: Make sure Python is installed on your system. You can download it from [Python.org](https://www.python.org/downloads/).
+1. **Python 3.9+**: Make sure Python is installed on your system. You can download it from [Python.org](https://www.python.org/downloads/).
 2. **Required Python packages**: Listed in the `requirements.txt` file.
 3. Make sure you have generated the PSSM dictionary from PSSM_Construction folder.
 
