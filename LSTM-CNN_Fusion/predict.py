@@ -1,4 +1,4 @@
-# Usage: python predict.py <fasta_file_path> <pssm_dict_path> <output_csv_path>
+# Usage: python predict.py <fasta_file_path> <pssm_dict_path> <trained_model_path> <output_csv_path>
 
 import sys
 import pickle
@@ -163,13 +163,13 @@ def main(fasta_file_path, pssm_dict_path, trained_model_path, save_path):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: python predict.py <fasta_file_path> <pssm_dict_path> <output_csv_path>")
+    if len(sys.argv) != 5:
+        print("Usage: python predict.py <fasta_file_path> <pssm_dict_path> <trained_model_path> <output_csv_path>")
         sys.exit(1)
 
     fasta_file_path = sys.argv[1]
     pssm_dict_path = sys.argv[2]
-    trained_model_path = 'model.pt'
-    save_path = sys.argv[3]
+    trained_model_path = sys.argv[3]
+    save_path = sys.argv[4]
 
     main(fasta_file_path, pssm_dict_path, trained_model_path, save_path)

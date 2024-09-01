@@ -29,13 +29,14 @@ Before running this script, ensure you have the following installed:
 To run the script, use the following command:
 
 ```bash
-python predict.py <fasta_file_path> <pssm_dict_path> <output_csv_path>
+python predict.py <fasta_file_path> <pssm_dict_path> <trained_model_path> <output_csv_path>
 ```
 
 ### Arguments:
 
 - `<fasta_file_path>`: Path to the FASTA file containing the sequences to be predicted.
 - `<pssm_dict_path>`: Path to the PSSM dictionary file (in pickle format).
+- `<trained_model_path>`: Path to the trained model.
 - `<output_csv_path>`: Path to save the resulting CSV file with predictions.
 
 ### Example
