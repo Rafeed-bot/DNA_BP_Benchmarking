@@ -1,12 +1,10 @@
-# args: prediction csv file path, PSSM dictionary path (if required), prediction csv file save path
+# args: prediction csv file path, PSSM dictionary path (if required), prediction csv file save path, model path
 
 import argparse
 import numpy as np
 import pickle
 import pandas as pd
 from Bio import SeqIO
-
-MODEL_PATH = 'LocalDPP/model.pkl'
 
 # Hyperparameters
 N = 3
@@ -129,7 +127,7 @@ def parse_arguments():
     parser.add_argument("pssm_dict", type=str, help="Path to the PSSM dictionary file")
     parser.add_argument("fasta_file", type=str, help="Path to the fasta file.")
     parser.add_argument("save_path", type=str, help="Path to save the csv predictions.")
-
+    parser.add_argument("model_path", type=str, help="Path to trained model.")
 
     return parser.parse_args()
 
@@ -145,13 +143,14 @@ if __name__ == '__main__':
 
     print("PSSM dictionary path:", args.pssm_dict)
     print("Fasta file path:", args.fasta_file)
-    print("Prdiction saving path:", args.save_path)
+    print("Prediction saving path:", args.save_path)
+    print("Model path:", args.model_path)
     
 
     fasta_file = args.fasta_file
     dic = load_pickle_file(args.pssm_dict)
     save_path = args.save_path
-    model_path = MODEL_PATH
+    model_path = args.model_path
 
     main(fasta_file, dic, save_path, model_path)
 
