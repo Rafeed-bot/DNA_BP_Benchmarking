@@ -42,14 +42,14 @@ python predict.py <fasta_file_path> <pssm_dict_path> <trained_model_path> <outpu
 ### Example
 
 ```bash
-python predict.py input.fasta pssm_dict.pickle predictions.csv
+python predict.py input.fasta pssm_dict.pickle ../Models/LocalDPP_model.pt predictions.csv
 ```
 
 This command will:
 
 1. Load the PSSM dictionary from `pssm_dict.pickle`.
 2. Read the sequences from `input.fasta`.
-3. Load the pre-trained model from `LSTM-CNN_Fusion/model.pkl`.
+3. Load the pre-trained model from `../Models/LocalDPP_model.pkl`.
 4. Predict labels for the sequences and save the results to `predictions.csv`.
 
 ### Example Output
